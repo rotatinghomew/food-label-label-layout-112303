@@ -1,0 +1,6 @@
+product,group,max_misunderstanding,min_understanding,max_high_confidence_error
+a,*,0.21,0.74,0.09
+b,*,0.24,0.70,0.12
+c,*,0.22,0.73,0.10
+*,老读者,0.25,0.70,0.10
+*,普通读者,0.24,0.72,0.12

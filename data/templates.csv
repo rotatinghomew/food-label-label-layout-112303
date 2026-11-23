@@ -1,0 +1,6 @@
+template,plate,products,shape,cells,copy,designs,status
+t1,P01,a/b,圆/方,5,未加蔗糖说明,d1/d4,候选
+t2,P01,a/b,圆/方,5,不同说明,d2/d5,候选
+t3,P02,b/c,长,5,未加蔗糖说明,d6/d8,候选
+t4,P02,a,圆,6,保留的既有文字,d1,已签
+t5,P03,c,长,4,无附加说明,d7,候选
