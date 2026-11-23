@@ -9,7 +9,23 @@
 ```sh
 python3 inspect_inputs.py data
 python3 -m unittest discover -s tests -v
+python3 -m analysis.report data --md REPORT.md --json analysis.json
 ```
+
+## 分析包
+
+`analysis/` 提供可复用的判定口径，供下次送审直接调用：
+
+- `core.py` 读取资料、按日期解析图稿属性、生成观测与选择记录，并做按人聚类稳健估计。
+- `identifiability.py` 用精确有理数消元报告图稿层面与成对层面的秩和别名；判断文案、瓶型、格数能否分开。
+- `modeling.py` 估计版式属性对选择、含义正确、高确信错误的影响。
+- `policy.py` 合并商品与读者组的门槛，按商品逐个评估模板。
+- `templates.py` 检查共用模板的版位文字是否一致，核算制版位与拆版成本。
+- `corrections.py` 评估图稿更正对证据与已签对象的影响。
+- `submissions.py` 对下一次送来的图稿/模板按同一口径分类。
+- `validation.py` 留一对、留一图稿、留一包和按人交叉验证。
+
+方法要点：单侧显示的记录是提前结束，不当作 `none`；文案与格数在资料中完全别名，只能得到合并效应；左右位置在块内固定，不单独解释；区间按参与者聚类。
 
 ## 记录约定
 
